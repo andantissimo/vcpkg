@@ -1,0 +1,52 @@
+diff --git a/libfcgi/fcgi_stdio.c b/libfcgi/fcgi_stdio.c
+index 9f0471d..f04caee 100644
+--- a/libfcgi/fcgi_stdio.c
++++ b/libfcgi/fcgi_stdio.c
+@@ -27,7 +27,7 @@ static const char rcsid[] = "$Id: fcgi_stdio.c,v 1.15 2009/09/28 00:46:30 robs E
+ #endif
+ 
+ #ifdef _WIN32
+-#define DLLAPI  __declspec(dllexport)
++/* #define DLLAPI  __declspec(dllexport) */
+ #endif
+ 
+ #include "fcgiapp.h"
+diff --git a/libfcgi/fcgiapp.c b/libfcgi/fcgiapp.c
+index d7bc3c8..c02b8b1 100644
+--- a/libfcgi/fcgiapp.c
++++ b/libfcgi/fcgiapp.c
+@@ -44,7 +44,7 @@ static const char rcsid[] = "$Id: fcgiapp.c,v 1.35 2003/06/22 00:16:43 robs Exp
+ #endif
+ 
+ #ifdef _WIN32
+-#define DLLAPI  __declspec(dllexport)
++/* #define DLLAPI  __declspec(dllexport) */
+ #endif
+ 
+ #include "fcgimisc.h"
+diff --git a/libfcgi/fcgio.cpp b/libfcgi/fcgio.cpp
+index 5a54c11..3e654e5 100644
+--- a/libfcgi/fcgio.cpp
++++ b/libfcgi/fcgio.cpp
+@@ -19,7 +19,7 @@
+ // FITNESS FOR A PARTICULAR PURPOSE.
+ 
+ #ifdef _WIN32
+-#define DLLAPI  __declspec(dllexport)
++/* #define DLLAPI  __declspec(dllexport) */
+ #endif
+ 
+ #include <limits.h>
+diff --git a/libfcgi/os_win32.c b/libfcgi/os_win32.c
+index ba78b90..fb42728 100644
+--- a/libfcgi/os_win32.c
++++ b/libfcgi/os_win32.c
+@@ -30,7 +30,7 @@ static const char rcsid[] = "$Id: os_win32.c,v 1.36 2009/09/28 01:09:57 robs Exp
+ #include <process.h>
+ #include <signal.h>
+ 
+-#define DLLAPI  __declspec(dllexport)
++/* #define DLLAPI  __declspec(dllexport) */
+ 
+ #include "fcgimisc.h"
+ #include "fcgios.h"
